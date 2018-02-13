@@ -16,7 +16,7 @@ public interface IRegister {
     /**
      * Calculate the total price.
      */
-    int calculateTotalPrice(ArrayList basket, Product product);
+    int calculateTotalPrice(ArrayList<Product> basket);
 
     /**
      * In this function the offers need to be taken into account

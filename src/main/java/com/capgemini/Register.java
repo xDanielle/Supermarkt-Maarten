@@ -10,15 +10,13 @@ public class Register implements IRegister {
     }
 
     public void checkOut(Customer customer){
-
         customer.greetCustomer();
-
     }
 
     /**
      * Calculate the total price.
      */
-    public int calculateTotalPrice(ArrayList basket, Product product) {
+    public int calculateTotalPrice(ArrayList<Product> basket) {
         return 0;
     }
 
