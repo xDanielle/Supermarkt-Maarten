@@ -7,9 +7,9 @@ public abstract class Customer {
     /**
      * Declare the variables first name, last name and the amount of products that the customer has picked up
      */
-    private String firstName;
-    private String lastName;
-    private boolean regular;
+    protected String firstName;
+    protected String lastName;
+    // private boolean regular;
     // private ArrayList basket;
     // private Basket basket;
     private Product product;
@@ -28,7 +28,7 @@ public abstract class Customer {
     /**
      * The customer needs to be greeted
      */
-    public abstract void greetCustomer(String firstName, String lastName, boolean regular);
+    public abstract void greetCustomer();
 
     /**
      * Customer gets basket
@@ -57,4 +57,21 @@ public abstract class Customer {
     public void setBasket(ArrayList basket) {
         this.basket = basket;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
 }

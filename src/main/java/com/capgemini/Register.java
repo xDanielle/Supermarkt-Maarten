@@ -9,6 +9,12 @@ public class Register implements IRegister {
 
     }
 
+    public void checkOut(Customer customer){
+
+        customer.greetCustomer();
+
+    }
+
     /**
      * Calculate the total price.
      */

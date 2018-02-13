@@ -18,7 +18,7 @@ public class App
         Customer VikkieVast = new ReturningCustomer("Vikkie", "Vast");
         Customer LosseFlodder = new NewCustomer("Mevrouw", "Flodder");
 
-        //genereer nieuwe producten
+        //maak nieuwe producten
         Product Robijn = new Product("Robijn", 3);
         Product Brinta = new Product("Brinta",2);
         Product ChineseGroenten = new Product("Chinese Groenten", 5);
@@ -27,12 +27,7 @@ public class App
 
         ArrayList<Product> basket = new ArrayList<Product>();
 
-        //genereer de offers
-        // offer aanbieding1 = new offer(Robijn, hoeveelheidproducten 3, 2 korting
-        // offer aanbieding2 = new offer(Brinta, hoeveelheidproducten 2, 1 korting
-        // offer aanbieding3 = new offer(Luiers, hoeveelheidproducten 4, 10 korting
-
-
+        //VikkieVast wordt gegroet
 
         // Regular klant Vikkie gaat winkelen
         VikkieVast.addToBasket(Robijn);
@@ -41,6 +36,27 @@ public class App
         VikkieVast.addToBasket(Luiers);
         VikkieVast.addToBasket(Brinta);
         VikkieVast.addToBasket(ChineseGroenten);
+
+        //maak de offers
+        Offer offerRobijn = new Offer(Robijn, 3, 2);
+        Offer offerBrinta = new Offer(Brinta, 2, 1);
+        Offer offerLuiers = new Offer(Luiers, 4, 10);
+
+        //maak arraylist van offers en voeg de 3 aangemaakte offers toe
+        ArrayList<Offer> offers = new ArrayList<Offer>();
+        offers.add(offerRobijn);
+        offers.add(offerBrinta);
+        offers.add(offerLuiers);
+
+        //Je aangemaakte register 'myRegister' wordt uitgevoerd met de methode checkOut en je stuurt de customer mee die moet afrekenen
+        //De customer bevat een product lijst die heet basket en daar gaat de register iets mee doen.
+        myRegister.checkOut(VikkieVast);
+
+
+
+
+
+
 
 
 

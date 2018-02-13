@@ -10,6 +10,9 @@ public interface IRegister {
      */
     void initialize (ArrayList<Product> allProducts);
 
+
+
+
     /**
      * Calculate the total price.
      */

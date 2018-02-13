@@ -14,10 +14,10 @@ public class NewCustomer extends Customer {
         super(firstName, lastName);
     }
 
-    public void greetCustomer(String firstName, String lastName, boolean regular) {
-        System.out.println("Welkom nieuwe klant!");
-
+    public void greetCustomer() {
+        System.out.println("Welcome new customer!");
     }
+
 
 
 }

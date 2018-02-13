@@ -14,8 +14,8 @@ public class ReturningCustomer extends Customer {
         super(firstName, lastName);
     }
 
-    public void greetCustomer(String firstName, String lastName, boolean regular) {
-        System.out.println("Welkom " + firstName + lastName);
+    public void greetCustomer() {
+        System.out.println("Welcome back " + super.firstName + super.lastName);
 
     }
 
