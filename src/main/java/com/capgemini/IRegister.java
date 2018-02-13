@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface IRegister {
 
-    void initialize(ArrayList<Product> allProducts = new ArrayList<Product>());
+    void initialize (ArrayList<Product> allProducts);
 
     /**
      * Calculate the total price.
