@@ -10,14 +10,15 @@ public abstract class Customer {
     private String firstName;
     private String lastName;
     private boolean regular;
-    private ArrayList productList;
-    private Basket basket;
+    // private ArrayList basket;
+    // private Basket basket;
     private Product product;
 
     /**
      * The first and last name of the customer needs to be known
+     *
      * @param firstName first name
-     * @param lastName last name
+     * @param lastName  last name
      */
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
@@ -31,25 +32,29 @@ public abstract class Customer {
 
     /**
      * Customer gets basket
+     * Deze methode maakt een arraylist aan van het object producten. De lijst heet basket. De methode returnt de lijst.
      */
-    public ArrayList generateBasket(){
-        ArrayList<Basket> productList = new ArrayList<Basket>();
-        return productList;
-    }
+
+    ArrayList<Product> basket = new ArrayList<Product>();
 
     /**
      * These functions stand for every time a customer picks up a new product. For example, when the customer picks
      * up a new product B, the amount of product B's need to be added by one.
+     *
      * @return the amount of products the customer has in his/her basket
      */
-    public abstract ArrayList addToBasket(ArrayList productList,Product product);
-
-    //Getters and setters
-    public ArrayList getProductList() {
-        return productList;
+    public void addToBasket(Product productName) {
+        this.basket.add(productName);
     }
 
-    public void setProductList(ArrayList productList) {
-        this.productList = productList;
+
+    //Getters and setters
+
+    public ArrayList getBasket() {
+        return basket;
+    }
+
+    public void setBasket(ArrayList basket) {
+        this.basket = basket;
     }
 }

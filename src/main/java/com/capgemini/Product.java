@@ -4,14 +4,19 @@ public class Product {
 
     //Variabelen
     private String name;
-    private double priceProduct;
+    private int priceProduct;
 
     //Constructor
 
-    public Product(String name, double priceProduct) {
+    public Product(String name, int priceProduct) {
         this.name = name;
         this.priceProduct = priceProduct;
     }
+
+
+
+
+
 
     //Getters and setters
 
@@ -23,11 +28,19 @@ public class Product {
         this.name = nameProduct;
     }
 
-    public double getPriceProduct() {
+    public int getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(double priceProduct) {
+    public void setPriceProduct(int priceProduct) {
         this.priceProduct = priceProduct;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", priceProduct=" + priceProduct +
+                '}';
     }
 }

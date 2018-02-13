@@ -2,14 +2,14 @@ package com.capgemini;
 
 public class Offer {
     private Product product;
-    private int amountOffer;
-    private double priceOffer;
+    private int amountOfProducts;
+    private int amountOfDiscount;
 
     //Constructor
-    public Offer(Product product, int amountOffer, double priceOffer) {
+    public Offer(Product product, int amountOfProducts, int amountOfDiscount) {
         this.product = product;
-        this.amountOffer = amountOffer;
-        this.priceOffer = priceOffer;
+        this.amountOfProducts = amountOfProducts;
+        this.amountOfDiscount = amountOfDiscount;
     }
 
     //Getters and setters
@@ -21,19 +21,19 @@ public class Offer {
         this.product = product;
     }
 
-    public int getAmountOffer() {
-        return amountOffer;
+    public int getAmountOfProducts() {
+        return amountOfProducts;
     }
 
-    public void setAmountOffer(int amountOffer) {
-        this.amountOffer = amountOffer;
+    public void setAmountOfProducts(int amountOfProducts) {
+        this.amountOfProducts = amountOfProducts;
     }
 
-    public double getPriceOffer() {
-        return priceOffer;
+    public int getAmountOfDiscount() {
+        return amountOfDiscount;
     }
 
-    public void setPriceOffer(double priceOffer) {
-        this.priceOffer = priceOffer;
+    public void setAmountOfDiscount(int amountOfDiscount) {
+        this.amountOfDiscount = amountOfDiscount;
     }
 }

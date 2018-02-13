@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public interface IRegister {
 
+    /**
+     * Importeren lijst van alle producten
+     * @param allProducts
+     */
     void initialize (ArrayList<Product> allProducts);
 
     /**
@@ -22,5 +26,5 @@ public interface IRegister {
      * Calculate the end price that will be shown on the screen
      */
 
-    void calculateEndPrice(double TotalPrice, double Discount);
+    void calculateEndPrice(int TotalPrice, int Discount);
 }
