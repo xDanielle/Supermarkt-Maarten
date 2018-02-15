@@ -18,18 +18,28 @@ public class App
         Customer VikkieVast = new ReturningCustomer("Vikkie", "Vast");
         Customer LosseFlodder = new NewCustomer("Mevrouw", "Flodder");
 
-        //maak nieuwe producten
+
+        // PRODUCTEN
+        // Maak nieuwe producten aan
         Product Robijn = new Product("Robijn", 3);
         Product Brinta = new Product("Brinta",2);
         Product ChineseGroenten = new Product("Chinese Groenten", 5);
         Product Kwark = new Product("Kwark", 2);
         Product Luiers = new Product("Luiers", 10);
 
-        ArrayList<Product> basket = new ArrayList<Product>();
+        // Maak de arraylist voor alle producten in het assortiment
+        ArrayList<Product> products = new ArrayList<Product>();
+        // Voeg alle producten toe aan allProducts lijst
+        products.add(Robijn);
+        products.add(Brinta);
+        products.add(ChineseGroenten);
+        products.add(Kwark);
+        products.add(Luiers);
 
-        //VikkieVast wordt gegroet
 
-        // Regular klant Vikkie gaat winkelen
+        // Regular klant Vikkie gaat winkelen en voegt producten toe aan haar basket
+        VikkieVast.addToBasket(Robijn);
+        VikkieVast.addToBasket(Robijn);
         VikkieVast.addToBasket(Robijn);
         VikkieVast.addToBasket(Brinta);
         VikkieVast.addToBasket(Kwark);
@@ -37,7 +47,8 @@ public class App
         VikkieVast.addToBasket(Brinta);
         VikkieVast.addToBasket(ChineseGroenten);
 
-        //maak de offers
+        // AANBIEDINGEN
+        // Aanbiedingen worden aangemaakt
         Offer offerRobijn = new Offer(Robijn, 3, 2);
         Offer offerBrinta = new Offer(Brinta, 2, 1);
         Offer offerLuiers = new Offer(Luiers, 4, 10);
@@ -48,9 +59,13 @@ public class App
         offers.add(offerBrinta);
         offers.add(offerLuiers);
 
-        //Je aangemaakte register 'myRegister' wordt uitgevoerd met de methode checkOut en je stuurt de customer mee die moet afrekenen
+
+
+        //Je aangemaakte register 'myRegister' wordt aangeroepen met de methode checkOut en je stuurt de customer mee die moet afrekenen
         //De customer bevat een product lijst die heet basket en daar gaat de register iets mee doen.
+        myRegister.initialize(products, offers);
         myRegister.checkOut(VikkieVast);
+
 
 
 

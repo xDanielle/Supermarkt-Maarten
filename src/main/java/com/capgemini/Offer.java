@@ -36,4 +36,13 @@ public class Offer {
     public void setAmountOfDiscount(int amountOfDiscount) {
         this.amountOfDiscount = amountOfDiscount;
     }
+
+    @Override
+    public String toString() {
+        return "Offer{" +
+                "product=" + product +
+                ", amountOfProducts=" + amountOfProducts +
+                ", amountOfDiscount=" + amountOfDiscount +
+                '}';
+    }
 }

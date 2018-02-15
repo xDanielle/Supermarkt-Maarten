@@ -8,12 +8,9 @@ public interface IRegister {
      * Importeren lijst van alle producten
      * @param allProducts
      */
-    void initialize (ArrayList<Product> allProducts);
+    void initialize (ArrayList<Product> allProducts, ArrayList<Offer> offers);
 
-
-
-
-    /**
+     /**
      * Calculate the total price.
      */
     int calculateTotalPrice(ArrayList<Product> basket);
@@ -23,7 +20,9 @@ public interface IRegister {
      * @return the price the customer will have to pay
      */
 
-    int calculateDiscount(ArrayList basket, Offer offer);
+    int calculateDiscount(ArrayList<Product> basket);
+
+
 
     /**
      * Calculate the end price that will be shown on the screen

@@ -1,5 +1,7 @@
 package com.capgemini;
 
+import java.util.ArrayList;
+
 public class Product {
 
     //Variabelen
@@ -12,6 +14,8 @@ public class Product {
         this.name = name;
         this.priceProduct = priceProduct;
     }
+
+
 
 
 
